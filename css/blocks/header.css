@@ -1,6 +1,7 @@
 .header {
   width: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
 }
 
 .header-div {
@@ -8,7 +9,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 21px 93px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: transparent;
+
+  transition:
+    background 0.35s ease,
+    backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.header-active {
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+/* тонкая линия снизу */
+.header-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  transform: translateX(-50%);
+  animation: headerLine 0.4s ease forwards;
+}
+
+@keyframes headerLine {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .header-h2 {
