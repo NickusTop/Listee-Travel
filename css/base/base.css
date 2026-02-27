@@ -1,0 +1,15 @@
+:root {
+    --worksans: 'Work Sans', sans-serif;
+    --water: 'Water Brush', cursive;
+    --clicker: 'Clicker Script', cursive;
+}
+
+body {
+    font-family: var(--worksans);
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+  user-select: none;
+  caret-color: transparent;
+}

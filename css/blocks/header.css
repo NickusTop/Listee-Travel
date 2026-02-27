@@ -1,0 +1,167 @@
+.header {
+  width: 100%;
+  position: absolute;
+}
+
+.header-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 93px;
+}
+
+.header-h2 {
+  font-family: var(--clicker);
+  font-size: 35px;
+  font-weight: 400;
+  color: #ee1c45;
+}
+
+.header-ul {
+  display: flex;
+  gap: 50px;
+}
+
+.header-li {
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+
+.header-a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #ffff;
+}
+
+.header-btn {
+  width: 100px;
+  height: 48px;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(90deg, #cd1a40 0%, #ff803c 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+
+  box-shadow: 0 5px 10px 0 rgba(205, 26, 64, 0.22);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.header-a-menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+.header-a-menu img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ======================= 1200px ======================= */
+
+@media (max-width: 1200px) {
+  .header-div {
+    padding: 21px 55px;
+  }
+
+  .header-h2 {
+    font-size: 32px;
+  }
+
+  .header-ul {
+    gap: 45px;
+  }
+
+  .header-li,
+  .header-a,
+  .header-btn {
+    font-size: 13px;
+  }
+
+  .header-btns {
+    gap: 28px;
+  }
+
+  .header-btn {
+    width: 90px;
+    height: 43px;
+  }
+}
+
+/* ======================= 1000px ======================= */
+
+@media (max-width: 1000px) {
+  .header-div {
+    padding: 21px 40px;
+  }
+
+  .header-h2 {
+    font-size: 30px;
+  }
+
+  .header-ul {
+    gap: 25px;
+  }
+
+  .header-li,
+  .header-a,
+  .header-btn {
+    font-size: 12px;
+  }
+
+  .header-btns {
+    gap: 23px;
+  }
+
+  .header-btn {
+    width: 85px;
+    height: 42px;
+  }
+}
+
+/* ======================= 768px ======================= */
+
+@media (max-width: 768px) {
+  .header-div {
+    padding: 21px 20px;
+  }
+
+  .header-h2 {
+    font-size: 28px;
+  }
+
+  .header-ul,
+  .header-btns {
+    display: none;
+  }
+
+  .header-a-menu {
+    display: block;
+  }
+}
+
+@media (hover: hover) {
+  .header-li:hover {
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+
+  .header-btn:hover {
+    box-shadow: 0 8px 20px 0 rgba(205, 26, 64, 0.45);
+  }
+}
